@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
-    <meta name="author" content="Alberto, ">
-    <title>Portal de Acesso à Informação</title>
+  <meta name="description" content="">
+  <meta name="author" content="Alberto, ">
+  <title>Portal de Acesso à Informação</title>
 
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="geral.css" rel="stylesheet">
 
-  </head>
+</head>
 
-  <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Portal de acesso à informação</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Início</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#contact">Contato</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Portal de acesso à informação</a>
       </div>
-    </nav>
-
-    <div class="container-fluid" role="main">
-      <div class="row">
-        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-        </nav>
-        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-          <div class="jumbotron">
-            <h1>Bem vindo ao portal de transparência</h1>
-            <p>Aqui seguimos precisamente as exigências da Lei de Acesso a Informação.</p>
-          </div>
-        </main>
-      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="solicitacao.html">Solicitar informação</a></li>
+          <li><a href="api.html">Dados para desenvolvedores</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
     </div>
+  </nav>
 
-    <script src="js/jquery-3.2.0.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+  <div class="container-fluid" role="main">
+    <div class="row">
+      <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+      </nav>
+      <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+        <div class="jumbotron">
+          <h1>Bem vindo ao portal de transparência</h1>
+          <p>Aqui seguimos precisamente as exigências da Lei de Acesso a Informação.</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 footerleft ">
+          <h4> Endereço:</h4>
+          <p>Campus Universitário Morro do Cruzeiro</p>
+          <p>Ouro Preto - MG, Brasil</p>
+          <p>CEP 35400-000 </p>
+          </div>
+          <div class="col-md-4 col-sm-6 footerleft " id="contato">
+            <h4> Contato:</h4>
+            <p>Telefone: 31 3559-1692</p>
+            <p>Email: contato@instituicao.gov.br </p>
+          </div>
+        </div>
+      </footer>
+      <!-- FIM DO FOOTER -->
+
+      <script src="js/jquery-3.2.0.min.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
   </body>
-  </body>
-</html>
+  </html>
