@@ -29,10 +29,9 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html">Início</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="#contato">Contato</a></li>
-          <li><a href="solicitacao.html">Solicitar informação</a></li>
+          <li class="active"><a href="solicitacao.html">Solicitar informação</a></li>
           <li><a href="api.html">Dados para desenvolvedores</a></li>
         </ul>
       </div><!--/.nav-collapse -->
@@ -41,18 +40,26 @@
 
   <div class="container-fluid" role="main">
     <div class="row">
-      <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-      </nav>
-      <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-        <div class="jumbotron">
-          <h1>Solicitação de informações</h1>
-          <p>Caso não tenha sido possivel localizar as informações desejadas no nosso portal você poderá solicitar a mesma diretamente a nós.
+      <div class="jumbotron">
+        <h1>Solicitação de informações</h1>
+        <p>Caso não tenha sido possivel localizar as informações desejadas no nosso portal você poderá solicitar a mesma diretamente a nós. </p>
+      </div>
+      <nav class="col-sm-9 col-md-3 hidden-xs-down bg-faded sidebar">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h2 class="panel-title">Orientações</h2>
           </div>
-          <div class="container">
-            <h2>Orientações</h2>
-            <p>Para solicitar uma informação basta prencher o formulário abaixo. O preenchimento correto do formulário fará que a sua solicitação seja atendida mais rápidamente. </p>
-            <p>Caso você deseje uma cópia física dos documentos solicitados será necessário o pagamento de uma taxa referente a produção da cópia dos mesmos,
-              essa taxa varia de acordo com a quantidade de páginas a serem copiadas e seu valor será informado após a analise da solicitação. </p>
+          <div class="panel-body">
+            <ul>
+              <li class="spaced-list-item">Para solicitar uma informação basta prencher o formulário abaixo. O preenchimento correto do formulário fará que a sua solicitação seja atendida mais rápidamente. </li>
+              <li class="spaced-list-item">Caso você deseje uma cópia física dos documentos solicitados será necessário o pagamento de uma taxa referente a produção da cópia dos mesmos,
+                essa taxa varia de acordo com a quantidade de páginas a serem copiadas e seu valor será informado após a analise da solicitação. </li>
+              </div>
+            </div>
+          </nav>
+          <main class="col-sm-9 offset-sm-5 col-md-9 offset-md-5">
+
+            <div class="container">
 
               <!-- FORMULÀRIO -->
               <h2>Solicitação</h2>
@@ -73,16 +80,18 @@
                 <fieldset class="form-group">
                   <label>Tipo de documento</label>
                   <div class="form-check">
-                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                    Carteira de Identidade
-                  </div>
-                  <div class="form-check">
-                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-                    C.P.F.
-                  </div>
-                  <div class="form-check disabled">
-                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
-                    Certidão de nascimento
+                    <label class="radio-inline">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                      Carteira de Identidade
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                      C.P.F.
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+                      Certidão de nascimento
+                    </label>
                   </div>
                 </fieldset>
                 <div class="form-group">
@@ -140,11 +149,11 @@
               <p>Telefone: 31 3559-1692</p>
               <p>Email: contato@instituicao.gov.br </p>
             </div>
-        </div>
-      </footer>
-      <!-- FIM DO FOOTER -->
+          </div>
+        </footer>
+        <!-- FIM DO FOOTER -->
 
-      <script src="js/jquery-3.2.0.min.js"></script>
-      <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
-  </html>
+        <script src="js/jquery-3.2.0.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+      </body>
+      </html>
