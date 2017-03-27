@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="">
+  <meta name="author" content="Alberto, ">
+  <title>Portal de Acesso à Informação</title>
+
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="geral.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Portal de acesso à informação</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="solicitacao.html">Solicitar informação</a></li>
+          <li class="active"><a href="api.html">Dados para desenvolvedores</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container-fluid" role="main">
+    <div class="row">
+      <div class="jumbotron">
+        <h1>Acesse os dados de forma fácil</h1>
+        <p>O nosso portal de transparência possui uma API para facilitar o seu programa a consumir os nossos dados.</p>
+      </div>
+      <nav class="col-sm-9 col-md-3 hidden-xs-down bg-faded sidebar">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h2 class="panel-title">Sobre</h2>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li class="spaced-list-item">Para consumir os nossos dados basta uma única chamada REST.</li>
+              <li class="spaced-list-item">Não conhece API's RESTFUL ou nunca trabalhou com JSON? <a href="#">Clique aqui</a> e entenda como funciona. </li>
+              </div>
+            </div>
+          </nav>
+          <main class="col-sm-9 offset-sm-5 col-md-9 offset-md-5">
+
+            <div class="container">
+
+              <h2>Acesso aos dados</h2>
+              <p>Para acessar os dados basta acessar o endereço: </p>
+              <div class="panel panel-default">
+                <div class="panel-body"  id="panel-ip">
+                  http://api.instituicao.gov.br/requisicao?tipo=<strong>&#60;TIPO&#62;</strong>&filtro=<strong>&#60;FILTRO&#62;</strong>.json
+                </div>
+              </div>
+              <p>Como destacado no endereço de chamada acima podesse escolher o tipo de dado que se deseja acessar e aplicar um filtro a este dado. Tipos de dados válidos, e seus filtros, são: </p>
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Convenios:</strong> relaciona todos os convênios firmados pela instituição. TIPO: convenios, FILTRO:
+                  <ul>
+                    <li>ativos</li>
+                    <li>encerrados</li>
+                    <li>todos</li>
+                  </ul>
+                </li>
+                <li class="list-group-item"><strong>Projetos:</strong> relaciona todos os projetos desenvolvidos pela instituição. TIPO: projetos, FILTRO:
+                  <ul>
+                    <li>ativos</li>
+                    <li>encerrados</li>
+                    <li>todos</li>
+                  </ul>
+                </li>
+                <li class="list-group-item"><strong>Funcionarios:</strong> relaciona os funcionários da instituição. TIPO: funcionarios, FILTRO:
+                  <ul>
+                    <li>diretoria</li>
+                    <li>gerencia</li>
+                    <li>concursados</li>
+                    <li>tercerizados</li>
+                    <li>estagiarios</li>
+                  </ul>
+                </li>
+              </ul>
+              <h4>Exemplo</h4>
+              <p>A chamada abaixo é um exemplo de chamada que retorna todos os convênios que estão ativos na instituição:
+              <div class="panel panel-default">
+                <div class="panel-body"  id="panel-ip">
+                  http://api.instituicao.gov.br/requisicao?tipo=<strong>convenios</strong>&filtro=<strong>ativos</strong>.json
+                </div>
+              </div>
+
+              <h2>Retorno obtido</h2>
+              <p>A API do portal de transparência retorna seus dados no formato JSON, sendo que este arquivo pode ser lido facilmente e é facilmente interpretado por programas simples. </p>
+              <p>Um exemplo de retorno válido para a solicitação acima é: </p>
+              <div class="panel panel-default">
+                <div class="panel-body"  id="panel-ip">
+                  &#123;
+                  &#34;requisicao&#34;: &#123;
+                  &#34;data_hora&#34;: &#34;27-03-2017-09-33&#34;,
+                  &#34;dados_requisitados&#34;: &#34;convenios&#34;,
+                  &#34;filtro&#34;: &#34;ativos&#34;,
+                  &#34;registros&#34;: &#34;3&#34;
+                  &#125;,
+                  &#34;dados&#34;: &#91;&#123;
+                  &#34;nome&#34;: &#34;convenio1&#34;,
+                  &#34;id&#34;: &#34;1&#34;,
+                  &#34;descricao&#34;: &#34;descricao do convenio 1&#34;,
+                  &#34;situacao&#34;: &#34;ativo&#34;
+                  &#34;duracao_meses&#34;: &#34;6&#34;
+                  &#34;contrato&#34;: &#34;arquivos.instituicao.gov.br/arquivos/convenio1.pdf&#34;&#125;,
+                  &#123;
+                  &#34;nome&#34;: &#34;convenio4&#34;,
+                  &#34;id&#34;: &#34;4&#34;,
+                  &#34;descricao&#34;: &#34;descricao do convenio 4&#34;,
+                  &#34;situacao&#34;: &#34;ativo&#34;
+                  &#34;duracao_meses&#34;: &#34;3&#34;
+                  &#34;contrato&#34;: &#34;arquivos.instituicao.gov.br/arquivos/convenio4.pdf&#34;&#125;,
+                  &#123;
+                  &#34;nome&#34;: &#34;convenio11&#34;,
+                  &#34;id&#34;: &#34;1&#34;,
+                  &#34;descricao&#34;: &#34;descricao do convenio 11&#34;,
+                  &#34;situacao&#34;: &#34;ativo&#34;
+                  &#34;duracao_meses&#34;: &#34;12&#34;
+                  &#34;contrato&#34;: &#34;arquivos.instituicao.gov.br/arquivos/convenio11.pdf&#34;&#125;&#93;
+                  &#125;
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="footer navbar-fixed-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 footerleft ">
+              <h4> Endereço:</h4>
+              <p>Campus Universitário Morro do Cruzeiro</p>
+              <p>Ouro Preto - MG, Brasil</p>
+              <p>CEP 35400-000 </p>
+            </div>
+            <div class="col-md-4 col-sm-6 footerleft " id="contato">
+              <h4> Contato:</h4>
+              <p>Telefone: 31 3559-1692</p>
+              <p>Email: contato@instituicao.gov.br </p>
+            </div>
+          </div>
+        </footer>
+        <!-- FIM DO FOOTER -->
+
+        <script src="js/jquery-3.2.0.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+      </body>
+      </html>
