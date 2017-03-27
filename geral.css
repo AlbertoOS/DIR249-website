@@ -2,6 +2,10 @@ body {
   margin-bottom: 180px;
 }
 
+.spaced-list-item {
+  padding-bottom: 20px;
+}
+
 .footer {
     background-color: #111111;
     color: #eeeeee;
