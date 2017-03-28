@@ -11,67 +11,55 @@
 
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="geral.css" rel="stylesheet">
+
+  <script>
+    window.onload=function(){function a(a,b){var c=/^(?:file):/,d=new XMLHttpRequest,e=0;d.onreadystatechange=function(){4==d.readyState&&(e=d.status),c.test(location.href)&&d.responseText&&(e=200),4==d.readyState&&200==e&&(a.outerHTML=d.responseText)};try{d.open("GET",b,!0),d.send()}catch(f){}}var b,c=document.getElementsByTagName("*");for(b in c)c[b].hasAttribute&&c[b].hasAttribute("data-include")&&a(c[b],c[b].getAttribute("data-include"))};
+  </script>
 
 </head>
 
-<body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">Portal de acesso à informação</a>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Portal de acesso à informação</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="solicitacao.html">Solicitar informação</a></li>
+            <li><a href="api.html">Dados para desenvolvedores</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="solicitacao.html">Solicitar informação</a></li>
-          <li><a href="api.html">Dados para desenvolvedores</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
+    </nav>
 
-  <div class="container-fluid" role="main">
-    <div class="row">
-      <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-      </nav>
-      <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-        <div class="jumbotron">
-          <h1>Bem vindo ao portal de transparência</h1>
-          <p>Aqui seguimos precisamente as exigências da Lei de Acesso a Informação.</p>
-        </div>
-      </main>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
+    <div class="container-fluid" role="main">
       <div class="row">
-        <div class="col-md-4 col-sm-6 footerleft ">
-          <h4> Endereço:</h4>
-          <p>Campus Universitário Morro do Cruzeiro</p>
-          <p>Ouro Preto - MG, Brasil</p>
-          <p>CEP 35400-000 </p>
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+        </nav>
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+          <div class="jumbotron">
+            <h1>Bem vindo ao portal de transparência</h1>
+            <p>Aqui seguimos precisamente as exigências da Lei de Acesso a Informação.</p>
           </div>
-          <div class="col-md-4 col-sm-6 footerleft " id="contato">
-            <h4> Contato:</h4>
-            <p>Telefone: 31 3559-1692</p>
-            <p>Email: contato@instituicao.gov.br </p>
-          </div>
-        </div>
-      </footer>
-      <!-- FIM DO FOOTER -->
+        </main>
+      </div>
+    </div>
 
-      <script src="js/jquery-3.2.0.min.js"></script>
-      <script src="bootstrap/js/bootstrap.min.js"></script>
-    </body>
+    <div data-include="footer.html"></div>
+
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
   </body>
   </html>
