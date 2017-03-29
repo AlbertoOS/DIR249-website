@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="">
+  <meta name="author" content="Alberto, ">
+  <title>Portal de Acesso à Informação</title>
+
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="geral.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Portal de acesso à informação</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Início</a></li>
+          <li><a href="sobre.html"><i class="fa fa-info-circle" aria-hidden="true"></i> Sobre</a></li>
+          <li class="active"><a href="busca.html"><i class="fa fa-search" aria-hidden="true"></i> Buscar documento</a></li>
+          <li ><a href="solicitacao.html"><i class="fa fa-envelope-open-o" aria-hidden="true"></i> Solicitar informação</a></li>
+          <li><a href="api.html"><i class="fa fa-desktop" aria-hidden="true"></i> Dados para desenvolvedores</a></li>
+          <li><a href="faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Perguntas frequentes</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container-fluid" role="main">
+    <div class="row">
+      <div class="jumbotron">
+        <h1>Buscar informações</h1>
+      </div>
+      <nav class="col-sm-9 col-md-3 hidden-xs-down bg-faded sidebar">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h2 class="panel-title">Orientações</h2>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li class="spaced-list-item">Você pode buscar por palavras chaves. Não sendo necessário que ela esteja no nome do documento.</li>
+              <li class="spaced-list-item">Você pode buscar pelo nome de pessoas e instituições relacionadas.</li>
+              <li class="spaced-list-item">Caso não consiga achar a informação pretendida você pode solicitar a mesma através do menu superior.</li>
+
+              </div>
+            </div>
+          </nav>
+          <main class="col-sm-9 offset-sm-5 col-md-9 offset-md-5">
+
+            <div class="container">
+
+              <!-- FORMULÀRIO -->
+              <h2>Busca</h2>
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Buscar por:</label>
+                  <input class="form-control" type="text" value="Universidade Federal de Ouro Preto" id="example-text-input">
+                </div>
+                <fieldset class="form-group">
+                  <label>Tipo de informação:</label>
+                  <div class="form-check">
+                    <label class="radio-inline">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                      Todos
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                      Convênio
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+                      Funcionário
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+                      Repasse
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+                      Despesa
+                    </label>
+                  </div>
+                </fieldset>
+
+                <button type="button" class="btn btn-primary" ><i class="fa fa-search" aria-hidden="true"></i> Buscar</button>
+              </form>
+              <!-- FIM DO FORMULARIO -->
+
+              <h2>Resultado:</h2>
+              <p>Foram encontrados <strong>5 resultados</strong>. Os seguintes resultados correspondem a sua busca: </p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nome arquivo</th>
+                    <th>Descrição</th>
+                    <th>Tipo</th>
+                    <th>Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Plano de trabalho XXXX UFOP-Instituição</td>
+                    <td>Plano de trabalho referente ao convênio XXXX ...</td>
+                    <td>Convênio</td>
+                    <td><a href="#"><img src="pdf.png" alt="Download PDF" height="32" width="32"></a>
+                    <a href="#"><img src="word.png" alt="Download DOC" height="32" width="32"></a>
+                    <a href="#"><img src="writer.png" alt="Download ODT" height="32" width="32"></a></td>
+                  </tr>
+                  <tr>
+                    <td>Despesa convenio XXXX Jan/2017</td>
+                    <td>Descritivo de despesas referente ao mês janeiro de 2017</td>
+                    <td>Despesa</td>
+                    <td><a href="#"><img src="excell.png" alt="Download Excell version" height="32" width="32"></a>
+                    <a href="#"><img src="calc.png" alt="Download Calc version" height="32" width="32"></a></td>
+                  </tr>
+                  <tr>
+                    <td>Despesa convenio XXXX Fev/2017</td>
+                    <td>Descritivo de despesas referente ao mês fevereiro de 2017</td>
+                    <td>Despesa</td>
+                    <td><a href="#"><img src="excell.png" alt="Download Excell version" height="32" width="32"></a>
+                    <a href="#"><img src="calc.png" alt="Download Calc version" height="32" width="32"></a></td>
+                  </tr>
+                  <tr>
+                    <td>Repasse convenio XXXX Fev/2017</td>
+                    <td>Termo de repasse de verba referente ao mês fevereiro de 2017</td>
+                    <td>Repasse</td>
+                    <td><a href="#"><img src="pdf.png" alt="Download PDF" height="32" width="32"></a>
+                    <a href="#"><img src="word.png" alt="Download DOC" height="32" width="32"></a>
+                    <a href="#"><img src="writer.png" alt="Download ODT" height="32" width="32"></a></td>
+                  </tr>
+                  <tr>
+                    <td>Repasse convenio XXXX Fev/2017</td>
+                    <td>Termo de repasse referente ao mês fevereiro de 2017</td>
+                    <td>Repasse</td>
+                    <td><a href="#"><img src="pdf.png" alt="Download PDF" height="32" width="32"></a>
+                    <a href="#"><img src="word.png" alt="Download DOC" height="32" width="32"></a>
+                    <a href="#"><img src="writer.png" alt="Download ODT" height="32" width="32"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </main>
+        </div>
+      </div>
+
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 footerleft ">
+              <h4> Endereço:</h4>
+              <p><i class="fa fa-map-marker" aria-hidden="true"></i> Campus Universitário Morro do Cruzeiro</p>
+              <p><i class="fa fa-university" aria-hidden="true"></i> Ouro Preto - MG, Brasil</p>
+              <p><i class="fa fa-address-book" aria-hidden="true"></i> CEP 35400-000 </p>
+            </div>
+            <div class="col-md-4 col-sm-6 footerleft " id="contato">
+              <h4> Contato:</h4>
+              <p><i class="fa fa-phone" aria-hidden="true"></i> Telefone: 31 3559-1692</p>
+              <p><i class="fa fa-envelope" aria-hidden="true"></i> Email: contato@instituicao.gov.br </p>
+              <p><i class="fa fa-clock-o" aria-hidden="true"></i> Horário funcionamento: 08:00 - 12:00 / 13:00 - 17:00 </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- FIM DO FOOTER -->
+
+        <script src="js/jquery-3.2.0.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+      </body>
+      </html>
