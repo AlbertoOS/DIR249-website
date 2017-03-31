@@ -1,5 +1,5 @@
 body {
-  margin-bottom: 180px;
+  margin-bottom: 200px;
 }
 
 .spaced-list-item {
@@ -7,13 +7,15 @@ body {
 }
 
 .footer {
+    z-index: 11000;
+    margin-bottom: -20px;
     background-color: #111111;
     color: #eeeeee;
-    border-top: 1px solid gray;
+    border-top: 1px solid black;
     padding-top: 10px;
     display: block;
     position: fixed;
-    left:0px;
+    left: 0px;
     right: 0px;
     bottom:0px;
     margin-top: 10px; /* space between content and footer */
