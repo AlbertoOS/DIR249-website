@@ -1,4 +1,4 @@
-var $affectedElements = $("p, h5, h4, h3, h2, .panel-title, .panel-body, .list-group"); // Can be extended, ex. $("div, p, span.someClass")
+var $affectedElements = $("p, h5, h4, h3, h2, .panel-title, .panel-body, .list-group, .form-group, .form-control, form>button, .table, .resizable"); // Can be extended, ex. $("div, p, span.someClass")
 
 // Storing the original size in a data attribute so size can be reset
 $affectedElements.each( function(){
